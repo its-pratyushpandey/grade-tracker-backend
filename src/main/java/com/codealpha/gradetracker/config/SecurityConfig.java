@@ -2,6 +2,7 @@ package com.codealpha.gradetracker.config;
 
 import com.codealpha.gradetracker.security.JwtAuthenticationFilter;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -26,6 +27,7 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import java.util.Arrays;
 import java.util.List;
 
+@Slf4j
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity
@@ -73,7 +75,17 @@ public class SecurityConfig {
         
         // Parse allowed origins from environment variable
         List<String> origins = Arrays.asList(allowedOrigins.split(","));
-        configuration.setAllowedOrigins(origins);
+        
+        // Trim whitespace from each origin
+        origins = origins.stream()
+                .map(String::trim)
+                .filter(s -> !s.isEmpty())
+                .toList();
+        
+        log.info("🌐 CORS Configuration - Allowed Origins: {}", origins);
+        
+        // Use setAllowedOriginPatterns for wildcard support
+        configuration.setAllowedOriginPatterns(origins);
         
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
         configuration.setAllowedHeaders(Arrays.asList("*", "Authorization", "Content-Type", "Accept"));
