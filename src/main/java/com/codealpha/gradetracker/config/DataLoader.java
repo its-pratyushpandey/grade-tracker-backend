@@ -79,74 +79,145 @@ public class DataLoader implements CommandLineRunner {
     private void loadStudents() {
         List<Student> students = new ArrayList<>();
 
+        // Indian student names with diverse backgrounds
         students.add(Student.builder()
-                .firstName("Emma").lastName("Johnson")
-                .email("emma.johnson@university.edu")
-                .phoneNumber("555-0101")
+                .firstName("Aarav").lastName("Sharma")
+                .email("aarav.sharma@university.edu")
+                .phoneNumber("+91-9876543210")
                 .enrollmentId("STU001")
                 .active(true).build());
 
         students.add(Student.builder()
-                .firstName("Liam").lastName("Smith")
-                .email("liam.smith@university.edu")
-                .phoneNumber("555-0102")
+                .firstName("Priya").lastName("Patel")
+                .email("priya.patel@university.edu")
+                .phoneNumber("+91-9876543211")
                 .enrollmentId("STU002")
                 .active(true).build());
 
         students.add(Student.builder()
-                .firstName("Olivia").lastName("Williams")
-                .email("olivia.williams@university.edu")
-                .phoneNumber("555-0103")
+                .firstName("Arjun").lastName("Kumar")
+                .email("arjun.kumar@university.edu")
+                .phoneNumber("+91-9876543212")
                 .enrollmentId("STU003")
                 .active(true).build());
 
         students.add(Student.builder()
-                .firstName("Noah").lastName("Brown")
-                .email("noah.brown@university.edu")
-                .phoneNumber("555-0104")
+                .firstName("Ananya").lastName("Singh")
+                .email("ananya.singh@university.edu")
+                .phoneNumber("+91-9876543213")
                 .enrollmentId("STU004")
                 .active(true).build());
 
         students.add(Student.builder()
-                .firstName("Ava").lastName("Jones")
-                .email("ava.jones@university.edu")
-                .phoneNumber("555-0105")
+                .firstName("Vivaan").lastName("Reddy")
+                .email("vivaan.reddy@university.edu")
+                .phoneNumber("+91-9876543214")
                 .enrollmentId("STU005")
                 .active(true).build());
 
         students.add(Student.builder()
-                .firstName("Ethan").lastName("Garcia")
-                .email("ethan.garcia@university.edu")
-                .phoneNumber("555-0106")
+                .firstName("Diya").lastName("Gupta")
+                .email("diya.gupta@university.edu")
+                .phoneNumber("+91-9876543215")
                 .enrollmentId("STU006")
                 .active(true).build());
 
         students.add(Student.builder()
-                .firstName("Sophia").lastName("Martinez")
-                .email("sophia.martinez@university.edu")
-                .phoneNumber("555-0107")
+                .firstName("Aditya").lastName("Verma")
+                .email("aditya.verma@university.edu")
+                .phoneNumber("+91-9876543216")
                 .enrollmentId("STU007")
                 .active(true).build());
 
         students.add(Student.builder()
-                .firstName("Mason").lastName("Davis")
-                .email("mason.davis@university.edu")
-                .phoneNumber("555-0108")
+                .firstName("Isha").lastName("Mehta")
+                .email("isha.mehta@university.edu")
+                .phoneNumber("+91-9876543217")
                 .enrollmentId("STU008")
                 .active(true).build());
 
         students.add(Student.builder()
-                .firstName("Isabella").lastName("Rodriguez")
-                .email("isabella.rodriguez@university.edu")
-                .phoneNumber("555-0109")
+                .firstName("Reyansh").lastName("Joshi")
+                .email("reyansh.joshi@university.edu")
+                .phoneNumber("+91-9876543218")
                 .enrollmentId("STU009")
                 .active(true).build());
 
         students.add(Student.builder()
-                .firstName("Lucas").lastName("Wilson")
-                .email("lucas.wilson@university.edu")
-                .phoneNumber("555-0110")
+                .firstName("Saanvi").lastName("Nair")
+                .email("saanvi.nair@university.edu")
+                .phoneNumber("+91-9876543219")
                 .enrollmentId("STU010")
+                .active(true).build());
+
+        students.add(Student.builder()
+                .firstName("Kabir").lastName("Desai")
+                .email("kabir.desai@university.edu")
+                .phoneNumber("+91-9876543220")
+                .enrollmentId("STU011")
+                .active(true).build());
+
+        students.add(Student.builder()
+                .firstName("Myra").lastName("Chopra")
+                .email("myra.chopra@university.edu")
+                .phoneNumber("+91-9876543221")
+                .enrollmentId("STU012")
+                .active(true).build());
+
+        students.add(Student.builder()
+                .firstName("Vihaan").lastName("Iyer")
+                .email("vihaan.iyer@university.edu")
+                .phoneNumber("+91-9876543222")
+                .enrollmentId("STU013")
+                .active(true).build());
+
+        students.add(Student.builder()
+                .firstName("Aanya").lastName("Malhotra")
+                .email("aanya.malhotra@university.edu")
+                .phoneNumber("+91-9876543223")
+                .enrollmentId("STU014")
+                .active(true).build());
+
+        students.add(Student.builder()
+                .firstName("Ayaan").lastName("Rao")
+                .email("ayaan.rao@university.edu")
+                .phoneNumber("+91-9876543224")
+                .enrollmentId("STU015")
+                .active(true).build());
+
+        students.add(Student.builder()
+                .firstName("Kiara").lastName("Bhatia")
+                .email("kiara.bhatia@university.edu")
+                .phoneNumber("+91-9876543225")
+                .enrollmentId("STU016")
+                .active(true).build());
+
+        students.add(Student.builder()
+                .firstName("Rohan").lastName("Agarwal")
+                .email("rohan.agarwal@university.edu")
+                .phoneNumber("+91-9876543226")
+                .enrollmentId("STU017")
+                .active(true).build());
+
+        students.add(Student.builder()
+                .firstName("Navya").lastName("Srinivasan")
+                .email("navya.srinivasan@university.edu")
+                .phoneNumber("+91-9876543227")
+                .enrollmentId("STU018")
+                .active(true).build());
+
+        students.add(Student.builder()
+                .firstName("Krishiv").lastName("Shah")
+                .email("krishiv.shah@university.edu")
+                .phoneNumber("+91-9876543228")
+                .enrollmentId("STU019")
+                .active(true).build());
+
+        students.add(Student.builder()
+                .firstName("Zara").lastName("Khan")
+                .email("zara.khan@university.edu")
+                .phoneNumber("+91-9876543229")
+                .enrollmentId("STU020")
                 .active(true).build());
 
         studentRepository.saveAll(students);
@@ -201,19 +272,34 @@ public class DataLoader implements CommandLineRunner {
         List<Grade> grades = new ArrayList<>();
         Random random = new Random();
 
-        String[] assessments = {"Midterm", "Final", "Quiz 1", "Quiz 2", "Assignment 1", "Assignment 2", "Project"};
+        String[] assessments = {"Midterm Exam", "Final Exam", "Quiz 1", "Quiz 2", "Quiz 3", 
+                               "Assignment 1", "Assignment 2", "Assignment 3", "Project", "Presentation"};
 
         for (Student student : students) {
-            // Each student gets 3-5 grades in random courses
-            int numGrades = 3 + random.nextInt(3);
+            // Each student gets 4-6 grades in different courses for better statistics
+            int numGrades = 4 + random.nextInt(3);
             List<Course> selectedCourses = new ArrayList<>(courses);
             java.util.Collections.shuffle(selectedCourses);
 
             for (int i = 0; i < numGrades && i < selectedCourses.size(); i++) {
                 Course course = selectedCourses.get(i);
                 
-                // Generate realistic grade (bias towards higher scores)
-                double score = 60 + random.nextDouble() * 40; // 60-100
+                // Generate realistic grade distribution:
+                // 20% A (90-100), 30% B (80-89), 30% C (70-79), 15% D (60-69), 5% F (0-59)
+                double rand = random.nextDouble();
+                double score;
+                
+                if (rand < 0.20) {
+                    score = 90 + random.nextDouble() * 10; // A grade
+                } else if (rand < 0.50) {
+                    score = 80 + random.nextDouble() * 10; // B grade
+                } else if (rand < 0.80) {
+                    score = 70 + random.nextDouble() * 10; // C grade
+                } else if (rand < 0.95) {
+                    score = 60 + random.nextDouble() * 10; // D grade
+                } else {
+                    score = 40 + random.nextDouble() * 20; // F grade
+                }
                 
                 Grade grade = Grade.builder()
                         .student(student)
