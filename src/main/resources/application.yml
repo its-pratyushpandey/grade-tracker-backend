@@ -1,0 +1,66 @@
+spring:
+  application:
+    name: student-grade-tracker
+  
+  profiles:
+    active: dev
+  
+  data:
+    mongodb:
+      uri: mongodb+srv://k:k@cluster0.wzxxhl9.mongodb.net/
+      database: gradetracker
+  
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+server:
+  port: 8080
+  error:
+    include-message: always
+    include-binding-errors: always
+
+# JWT Configuration
+jwt:
+  secret: ${JWT_SECRET:404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970}
+  expiration: 86400000 # 24 hours
+
+# Application Configuration
+app:
+  cors:
+    allowed-origins: http://localhost:3000,http://localhost:5173
+  
+# Swagger/OpenAPI
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
+    tags-sorter: alpha
+  
+# Logging
+logging:
+  level:
+    com.codealpha: DEBUG
+    org.springframework.security: DEBUG
+    org.springframework.data.mongodb: DEBUG
+
+---
+# Production Profile
+spring:
+  config:
+    activate:
+      on-profile: prod
+  
+  data:
+    mongodb:
+      uri: ${MONGODB_URI:mongodb+srv://k:k@cluster0.wzxxhl9.mongodb.net/}
+      database: ${MONGODB_DATABASE:gradetracker}
+
+logging:
+  level:
+    com.codealpha: INFO
+    org.springframework.security: WARN
+    org.springframework.data.mongodb: WARN
