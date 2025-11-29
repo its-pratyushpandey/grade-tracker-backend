@@ -19,7 +19,6 @@ import java.util.List;
 @RequiredArgsConstructor
 @Tag(name = "Courses", description = "Course management endpoints")
 @SecurityRequirement(name = "bearer-jwt")
-@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:3001", "http://localhost:3002", "http://localhost:5173"})
 public class CourseController {
 
     private final CourseService courseService;

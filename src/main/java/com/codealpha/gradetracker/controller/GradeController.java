@@ -22,7 +22,6 @@ import java.util.List;
 @RequiredArgsConstructor
 @Tag(name = "Grades", description = "Grade management endpoints")
 @SecurityRequirement(name = "bearer-jwt")
-@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:3001", "http://localhost:3002", "http://localhost:5173"})
 public class GradeController {
 
     private final GradeService gradeService;

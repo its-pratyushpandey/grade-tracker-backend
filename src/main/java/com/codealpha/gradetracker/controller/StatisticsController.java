@@ -14,9 +14,8 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/statistics")
 @RequiredArgsConstructor
-@Tag(name = "Statistics", description = "Statistics and analytics endpoints")
+@Tag(name = "Statistics", description = "Statistics endpoints")
 @SecurityRequirement(name = "bearer-jwt")
-@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:3001", "http://localhost:3002", "http://localhost:5173"})
 public class StatisticsController {
 
     private final StatisticsService statisticsService;

@@ -29,7 +29,7 @@ jwt:
 # Application Configuration
 app:
   cors:
-    allowed-origins: http://localhost:3000,http://localhost:5173
+    allowed-origins: ${ALLOWED_ORIGINS:http://localhost:3000,http://localhost:5173,https://grade-tracker-frontend.onrender.com,https://grade-tracker-frontend-*.onrender.com}
   
 # Swagger/OpenAPI
 springdoc:

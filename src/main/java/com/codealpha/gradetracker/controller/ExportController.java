@@ -15,9 +15,8 @@ import java.io.IOException;
 @RestController
 @RequestMapping("/api/export")
 @RequiredArgsConstructor
-@Tag(name = "Export", description = "Data export endpoints (CSV & PDF)")
+@Tag(name = "Export", description = "Export endpoints for grades and reports")
 @SecurityRequirement(name = "bearer-jwt")
-@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:3001", "http://localhost:3002", "http://localhost:5173"})
 public class ExportController {
 
     private final ExportService exportService;
