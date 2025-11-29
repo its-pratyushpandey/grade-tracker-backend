@@ -32,27 +32,53 @@ public class DataLoader implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        if (userRepository.count() == 0) {
-            loadUsers();
-        }
+        try {
+            log.info("========================================");
+            log.info("Starting data loading process...");
+            log.info("========================================");
+            
+            if (userRepository.count() == 0) {
+                log.info("Loading users...");
+                loadUsers();
+            } else {
+                log.info("Users already exist, skipping user creation");
+            }
 
-        if (studentRepository.count() == 0) {
-            loadStudents();
-        }
+            if (studentRepository.count() == 0) {
+                log.info("Loading students...");
+                loadStudents();
+            } else {
+                log.info("Students already exist, skipping student creation");
+            }
 
-        if (courseRepository.count() == 0) {
-            loadCourses();
-        }
+            if (courseRepository.count() == 0) {
+                log.info("Loading courses...");
+                loadCourses();
+            } else {
+                log.info("Courses already exist, skipping course creation");
+            }
 
-        if (gradeRepository.count() == 0) {
-            loadGrades();
-        }
+            if (gradeRepository.count() == 0) {
+                log.info("Loading grades...");
+                loadGrades();
+            } else {
+                log.info("Grades already exist, skipping grade creation");
+            }
 
-        log.info("========================================");
-        log.info("Sample data loaded successfully!");
-        log.info("Admin credentials: admin / admin123");
-        log.info("User credentials: user / user123");
-        log.info("========================================");
+            log.info("========================================");
+            log.info("Sample data loaded successfully!");
+            log.info("Total Users: {}", userRepository.count());
+            log.info("Total Students: {}", studentRepository.count());
+            log.info("Total Courses: {}", courseRepository.count());
+            log.info("Total Grades: {}", gradeRepository.count());
+            log.info("Admin credentials: admin / admin123");
+            log.info("User credentials: user / user123");
+            log.info("========================================");
+        } catch (Exception e) {
+            log.error("========================================");
+            log.error("ERROR loading sample data: {}", e.getMessage(), e);
+            log.error("========================================");
+        }
     }
 
     private void loadUsers() {

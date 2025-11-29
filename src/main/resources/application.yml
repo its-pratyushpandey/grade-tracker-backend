@@ -8,7 +8,7 @@ spring:
   data:
     mongodb:
       uri: mongodb+srv://k:k@cluster0.wzxxhl9.mongodb.net/
-      database: gradetracker
+      database: gradetracker_v2
   
   servlet:
     multipart:
@@ -57,7 +57,7 @@ spring:
   data:
     mongodb:
       uri: ${MONGODB_URI:mongodb+srv://k:k@cluster0.wzxxhl9.mongodb.net/}
-      database: ${MONGODB_DATABASE:gradetracker}
+      database: ${MONGODB_DATABASE:gradetracker_v2}
 
 logging:
   level:
